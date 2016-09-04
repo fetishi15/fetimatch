@@ -1,0 +1,1 @@
+json.array! @user_profs, partial: 'user_profs/user_prof', as: :user_prof

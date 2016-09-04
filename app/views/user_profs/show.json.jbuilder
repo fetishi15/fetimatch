@@ -1,0 +1,1 @@
+json.partial! "user_profs/user_prof", user_prof: @user_prof

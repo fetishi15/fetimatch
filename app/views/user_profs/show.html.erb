@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @user_prof.age %>
+</p>
+
+<p>
+  <strong>Img:</strong>
+  <%= @user_prof.img %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @user_prof.place %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user_prof.name %>
+</p>
+
+<p>
+  <strong>Tall:</strong>
+  <%= @user_prof.tall %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @user_prof.weight %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= @user_prof.sex %>
+</p>
+
+<p>
+  <strong>Body type:</strong>
+  <%= @user_prof.body_type %>
+</p>
+
+<p>
+  <strong>Hobby:</strong>
+  <%= @user_prof.hobby %>
+</p>
+
+<%= link_to 'Edit', edit_user_prof_path(@user_prof) %> |
+<%= link_to 'Back', user_profs_path %>
