@@ -1,0 +1,26 @@
+class KininaruController < ApplicationController
+	class RelationshipsController < ApplicationController
+    before_action :authenticate_user!
+
+    def create
+        @user = User.find(params[:user_id])
+        follow = current_user.kininaru.build(following_id: @user.id)
+        if follow.save
+            redirect_to posts_url, notice: "気になるしました"
+        else
+            redirect_to posts_url, alert: "気になるできません"
+        end
+    end
+
+end
+
+  def destroy
+        @user = User.find(params[:user_id])
+        follow = current_user.relationships.find_by!(following_id: @user.id)
+        follow.destroy
+        redirect_to posts_url, notice: "気になる解除しました"
+    end
+end
+
+
+
