@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160828075528) do
+ActiveRecord::Schema.define(version: 20160904051830) do
+
+  create_table "user_profs", force: :cascade do |t|
+    t.integer  "age"
+    t.string   "img"
+    t.string   "place"
+    t.string   "name"
+    t.string   "tall"
+    t.string   "weight"
+    t.integer  "sex"
+    t.integer  "body_type"
+    t.string   "hobby"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

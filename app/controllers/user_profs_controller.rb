@@ -1,16 +1,7 @@
 class UserProfsController < ApplicationController
   before_action :set_user_prof, only: [:show, :edit, :update, :destroy]
 
-  # GET /user_profs
-  # GET /user_profs.json
-  def index
-    @user_profs = UserProf.all
-  end
 
-  # GET /user_profs/1
-  # GET /user_profs/1.json
-  def show
-  end
 
   # GET /user_profs/new
   def new
@@ -25,7 +16,7 @@ class UserProfsController < ApplicationController
   # POST /user_profs.json
   def create
     @user_prof = UserProf.new(user_prof_params)
-
+    @user_prof.user_id = current_user.id
     respond_to do |format|
       if @user_prof.save
         format.html { redirect_to @user_prof, notice: 'User prof was successfully created.' }

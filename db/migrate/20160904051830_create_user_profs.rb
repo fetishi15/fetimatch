@@ -10,6 +10,7 @@ class CreateUserProfs < ActiveRecord::Migration
       t.integer :sex
       t.integer :body_type
       t.string :hobby
+      t.integer :user_id
 
       t.timestamps null: false
     end
